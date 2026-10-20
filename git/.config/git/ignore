@@ -1,0 +1,16 @@
+# Archivos de sistema de macOS y Windows
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Desktop.ini
+Thumbs.db
+
+# Python compilado
+*.pyc
+
+# Notas locales de trabajo en Markdown
+*.local.md
+
+# Ajustes locales de Claude Code en cada proyecto
+**/.claude/settings.local.json

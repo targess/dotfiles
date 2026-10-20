@@ -1,0 +1,65 @@
+# Nombre y email viven en ~/.config/git/user, fuera del repo; install.sh lo crea
+[include]
+	path = ~/.config/git/user
+
+[alias]
+	# git s (o g s): status corto
+	s = status -s
+	# Añade lo preparado al último commit sin cambiar el mensaje
+	amend = commit --amend --reuse-message=HEAD
+	# Borra las ramas locales ya mergeadas (nunca main, master ni staging)
+	dm = "!git branch --merged | grep -vE '^\\*|^[[:space:]]*(main|master|staging)$' | xargs -n 1 git branch -d"
+	# Ramas y tags que contienen un commit
+	fb = "!f() { git branch -a --contains $1; }; f"
+	ft = "!f() { git describe --always --contains $1; }; f"
+	# Commits que añaden o quitan un texto en el código
+	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+	# Commits cuyo mensaje contiene un texto
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+	# Lista los aliases
+	aliases = config --get-regexp alias
+
+[apply]
+	# Corrige los errores de espacios al aplicar un parche
+	whitespace = fix
+
+[core]
+	# Marca como error los espacios al final de línea y antes de tabuladores
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+	# Acelera los comandos que miran archivos sin seguimiento, como git status
+	untrackedCache = true
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = green
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[diff]
+	# Detecta copias además de renombrados
+	renames = copies
+
+[help]
+	# Si escribes mal un comando, propone el correcto y pregunta antes de ejecutarlo
+	autocorrect = prompt
+
+[merge]
+	# Incluye el resumen de los commits mergeados en el mensaje del merge
+	log = true
+
+[pull]
+	rebase = true
+
+[push]
+	# Sube a la rama remota del mismo nombre
+	default = current
+	# Sube también los tags anotados de lo que empujas
+	followTags = true
