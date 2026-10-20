@@ -1,0 +1,28 @@
+{
+  "model": "opus[1m]",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.py"
+  },
+  "theme": "dark",
+  "outputStyle": "Concise",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/targess/.claude-work/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "tui": "fullscreen"
+}
