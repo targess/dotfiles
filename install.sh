@@ -61,6 +61,9 @@ if [ ! -e "$HOME/.config/git/user" ]; then
   printf '[user]\n\tname = %s\n\temail = %s\n' "$git_name" "$git_email" > "$HOME/.config/git/user"
 fi
 
+# Versiones globales de Ruby y Node
+mise install
+
 "$DOTFILES_DIR/macos.sh"
 
 # El script del hook de Claude lo gestiona herdr: se instala en cada perfil en vez de versionarlo.

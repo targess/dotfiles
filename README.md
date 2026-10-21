@@ -12,6 +12,7 @@ Configuración de macOS con [GNU Stow](https://www.gnu.org/software/stow/) y Hom
 | `zsh` | oh-my-zsh, PATH, alias y funciones (fragmentos en `~/.config/zsh/`) |
 | `git` | Configuración global, aliases y gitignore global |
 | `editorconfig` | Reglas de formato por defecto para todos los proyectos |
+| `mise` | Versiones de Ruby y Node por carpeta; lee `.ruby-version` y `.nvmrc` |
 | `ngrok` | `tunnel [destino]`: túnel con tu dominio fijo de ngrok |
 
 - `Brewfile`: lo que se instala con Homebrew.
@@ -37,7 +38,7 @@ Si un archivo de `~` choca con el repo, se aparta como `<archivo>.bak`. La prime
   export NGROK_UPSTREAM="host:puerto"   # destino de `tunnel` sin argumentos
   ```
   Uso: `tunnel` abre el túnel hacia `NGROK_UPSTREAM`; `tunnel localhost:3000` usa el mismo dominio hacia otro destino.
-- **rvm y nvm**: con sus instaladores, usando sus opciones para no tocar los archivos de shell; si no, añaden líneas al `.zshrc`, que es un enlace al repo.
+- **Ruby y Node de cada proyecto**: `mise install` dentro de la carpeta del proyecto.
 - **Spaces**: asignar cada app a su escritorio (clic derecho en el Dock → *Opciones → Asignar a*).
 
 ## Añadir un paquete
