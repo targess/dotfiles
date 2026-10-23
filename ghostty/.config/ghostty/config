@@ -1,0 +1,61 @@
+# Abre herdr directamente en cada ventana nueva
+command = /opt/homebrew/bin/herdr
+# No pide confirmación al cerrar: herdr sigue corriendo en segundo plano
+confirm-close-surface = false
+# Cierra Ghostty al cerrar la última ventana
+quit-after-last-window-closed = true
+# No restaura ventanas al abrir (herdr ya restaura la sesión)
+window-save-state = never
+# Oculta la barra de título (no usamos pestañas de Ghostty)
+macos-titlebar-style = hidden
+# Margen interior horizontal y vertical, en píxeles
+window-padding-x = 4
+window-padding-y = 4
+# Reparte el margen sobrante por igual a ambos lados
+window-padding-balance = true
+# Solo el Option izquierdo funciona como Alt; el derecho sigue escribiendo
+# los caracteres del teclado español (@ # | [ ] { } \ ~)
+macos-option-as-alt = left
+# Tamaño de letra, en puntos (por defecto 13)
+font-size = 15
+# Oculta el ratón mientras escribes
+mouse-hide-while-typing = true
+
+# Desasignar atajos de Ghostty para que lleguen a herdr
+keybind = cmd+t=unbind
+keybind = cmd+w=unbind
+keybind = cmd+d=unbind
+keybind = cmd+shift+d=unbind
+keybind = cmd+[=unbind
+keybind = cmd+]=unbind
+keybind = cmd+shift+[=unbind
+keybind = cmd+shift+]=unbind
+keybind = cmd+g=unbind
+keybind = cmd+k=unbind
+keybind = cmd+shift+enter=unbind
+# ctrl+tab no es imprimible: unbind no lo deja pasar, así que se envía su código explícitamente
+keybind = ctrl+tab=csi:9;5u
+keybind = ctrl+shift+tab=csi:9;6u
+keybind = cmd+alt+arrow_left=unbind
+keybind = cmd+alt+arrow_down=unbind
+keybind = cmd+alt+arrow_up=unbind
+keybind = cmd+alt+arrow_right=unbind
+# cmd+1..9: hay que desasignar el carácter (cmd+1) y la tecla física (cmd+digit_1)
+keybind = cmd+1=unbind
+keybind = cmd+digit_1=unbind
+keybind = cmd+2=unbind
+keybind = cmd+digit_2=unbind
+keybind = cmd+3=unbind
+keybind = cmd+digit_3=unbind
+keybind = cmd+4=unbind
+keybind = cmd+digit_4=unbind
+keybind = cmd+5=unbind
+keybind = cmd+digit_5=unbind
+keybind = cmd+6=unbind
+keybind = cmd+digit_6=unbind
+keybind = cmd+7=unbind
+keybind = cmd+digit_7=unbind
+keybind = cmd+8=unbind
+keybind = cmd+digit_8=unbind
+keybind = cmd+9=unbind
+keybind = cmd+digit_9=unbind
