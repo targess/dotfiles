@@ -1,0 +1,26 @@
+onboarding = false
+
+[keys]
+new_tab = ["prefix+c", "cmd+t"]
+close_pane = ["prefix+x", "cmd+w"]
+split_vertical = ["prefix+v", "cmd+d"]
+split_horizontal = ["prefix+minus", "cmd+shift+d"]
+cycle_pane_next = ["cmd+]", "cmd+alt+]"]
+cycle_pane_previous = ["cmd+[", "cmd+alt+["]
+next_tab = ["prefix+n", "ctrl+tab", "cmd+shift+]"]
+previous_tab = ["prefix+p", "ctrl+shift+tab", "cmd+shift+["]
+switch_workspace = "cmd+1..9"
+switch_tab = ["prefix+1..9", "alt+1..9"]
+goto = ["prefix+g", "cmd+g"]
+focus_pane_left  = ["prefix+h", "cmd+alt+h", "cmd+alt+left"]
+focus_pane_down  = ["prefix+j", "cmd+alt+j", "cmd+alt+down"]
+focus_pane_up    = ["prefix+k", "cmd+alt+k", "cmd+alt+up"]
+focus_pane_right = ["prefix+l", "cmd+alt+l", "cmd+alt+right"]
+zoom = ["prefix+z", "cmd+shift+enter"]
+clear_pane = ["prefix+ctrl+k", "cmd+k"]
+
+[theme]
+name = "terminal"
+
+[ui.toast]
+delivery = "terminal"
