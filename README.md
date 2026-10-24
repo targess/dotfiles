@@ -2,6 +2,8 @@
 
 Configuración de macOS con [GNU Stow](https://www.gnu.org/software/stow/) y Homebrew.
 
+Atajos y comandos del día a día: [CHEATSHEET.md](CHEATSHEET.md).
+
 ## Qué hay
 
 | Paquete | Configura |
