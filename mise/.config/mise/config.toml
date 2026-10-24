@@ -1,0 +1,10 @@
+[settings]
+# Lee .ruby-version, .nvmrc y la línea ruby del Gemfile, como hacían rvm y nvm
+idiomatic_version_file_enable_tools = ["ruby", "node"]
+# No intenta instalar solo una versión que falta (los proyectos con Ruby 2.x corren en Docker)
+not_found_auto_install = false
+
+# Versiones globales, para cuando la carpeta no pide ninguna
+[tools]
+ruby = "3.4"
+node = "lts"
