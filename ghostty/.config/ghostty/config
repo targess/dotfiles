@@ -31,6 +31,7 @@ keybind = cmd+]=unbind
 keybind = cmd+shift+[=unbind
 keybind = cmd+shift+]=unbind
 keybind = cmd+g=unbind
+keybind = cmd+shift+g=unbind
 keybind = cmd+k=unbind
 keybind = cmd+shift+enter=unbind
 # ctrl+tab no es imprimible: unbind no lo deja pasar, así que se envía su código explícitamente
