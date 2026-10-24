@@ -29,5 +29,8 @@ export PUPPETEER_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS
 # Ruby y Node: mise cambia de versión al entrar en cada carpeta
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 
+# fzf: ctrl+r busca en el historial, ctrl+t busca archivos y alt+c entra en una carpeta
+source <(fzf --zsh)
+
 # Resaltado de sintaxis mientras escribes. Va al final, como pide el plugin
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

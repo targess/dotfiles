@@ -7,6 +7,7 @@ cask "ghostty"
 brew "herdr"
 brew "terminal-notifier"
 brew "zsh-syntax-highlighting"
+brew "fzf"
 
 # Desarrollo
 cask "orbstack"
