@@ -21,7 +21,7 @@ Configuración de macOS con [GNU Stow](https://www.gnu.org/software/stow/) y Hom
 ## Instalar
 
 ```sh
-git clone <url-del-repo> ~/dotfiles
+git clone https://github.com/targess/dotfiles.git ~/dotfiles
 ~/dotfiles/install.sh
 ```
 
